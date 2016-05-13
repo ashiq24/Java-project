@@ -9,18 +9,18 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="600.0" style="-fx-background-color: magenta;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="514.0" layoutY="31.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="NEXT" textFill="#b51515" />
-      <Button layoutX="471.0" layoutY="178.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="115.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="FOR MORE" textFill="#b51515" />
-      <Button layoutX="91.0" layoutY="22.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="337.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 3;" text="DEOMDEMO" textFill="#d02c5d">
+      <Button layoutX="432.0" layoutY="178.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="162.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="MORE ABOUT THIS WORD" textFill="#b51515" />
+      <Button layoutX="74.0" layoutY="22.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="337.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 3;" text="START !!!" textFill="#d02c5d">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <TextArea layoutX="91.0" layoutY="131.0" prefHeight="94.0" prefWidth="337.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="demodemodemo">
+      <TextArea layoutX="74.0" layoutY="131.0" prefHeight="94.0" prefWidth="337.0" promptText="meaning" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </TextArea>
-      <TextArea layoutX="91.0" layoutY="255.0" prefHeight="154.0" prefWidth="337.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="demodemodemo">
+      <TextArea layoutX="74.0" layoutY="255.0" prefHeight="154.0" prefWidth="337.0" promptText="sentence" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
@@ -45,5 +45,6 @@
             <Font size="25.0" />
          </font>
       </Label>
+      <Button layoutX="525.0" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="HOME" textFill="#b51515" />
    </children>
 </AnchorPane>
