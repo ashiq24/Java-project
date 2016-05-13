@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="600.0" style="-fx-background-color: magenta;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="514.0" layoutY="31.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="NEXT" textFill="#b51515" />
+      <Button layoutX="471.0" layoutY="178.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="115.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="FOR MORE" textFill="#b51515" />
+      <Button layoutX="91.0" layoutY="22.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="337.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 3;" text="DEOMDEMO" textFill="#d02c5d">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <TextArea layoutX="91.0" layoutY="131.0" prefHeight="94.0" prefWidth="337.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="demodemodemo">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="91.0" layoutY="255.0" prefHeight="154.0" prefWidth="337.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="demodemodemo">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="8.0" layoutY="37.0" prefHeight="29.0" prefWidth="75.0" text="WORD" textFill="#37359a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="131.0" prefHeight="29.0" prefWidth="75.0" text="Meaning" textFill="#37359a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="255.0" prefHeight="29.0" prefWidth="75.0" text="Sentence" textFill="#37359a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="441.0" prefHeight="29.0" prefWidth="272.0" textFill="#0b46da">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
