@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-padding: 10; -fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="588.0" style="-fx-padding: 10; -fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Button mnemonicParsing="false" prefHeight="173.0" prefWidth="514.0" style="-fx-border-color: violet; -fx-border-width: 3; -fx-background-color: black;" text="GRE WORD PRACTICE" textFill="WHITE">
          <font>
@@ -13,7 +13,7 @@
          </font>
       </Button>
       <Region prefHeight="100.0" prefWidth="580.0" />
-      <Button id="start" mnemonicParsing="false" onAction="#stataction" prefHeight="38.0" prefWidth="169.0" style="-fx-background-color: black; -fx-border-width: 1; -fx-border-color: violet;" text="START" textFill="WHITE">
+      <Button id="start" mnemonicParsing="false" onAction="#stataction" prefHeight="49.0" prefWidth="180.0" style="-fx-background-color: black; -fx-border-width: 1; -fx-border-color: violet;" text="START" textFill="WHITE">
          <font>
             <Font name="Algerian" size="20.0" />
          </font></Button>

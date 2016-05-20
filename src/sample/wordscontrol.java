@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.io.File;
@@ -13,29 +14,21 @@ import java.util.Scanner;
 /**
  * Created by Ashiq on 5/12/2016.
  */
-class Node
-{
-    String word;
-    String mean;
-    String senten;
-    Node(String w,String m,String s)
-    {
-        word=w;
-        mean=m;
-        senten=s;
-    }
-}
+
 public class wordscontrol {
     public static File file;
     public static ArrayList<Node > words;
     public static ArrayList<Node > knownwords;
     public static Node []wordarray;
     public static  int pos;
-    Label endup;
-    Button word;
-    Button home,next,formore;
-    TextField meaning, sentence;
-    public static void loadthings(){
+    public Label endup;
+    public Button word;
+    public Button home;
+    public Button next;
+    public Button formore;
+    public TextArea meaning;
+    public TextArea sentence;
+    public static void loadthings(wordscontrol control){
         Scanner fscan;
         words=new ArrayList<>() ;
        try
@@ -77,30 +70,65 @@ public class wordscontrol {
             System.out.println(e);
         }
         words.removeAll(knownwords);
-        wordarray=(Node [])words.toArray();
         pos=0;
+
+        if( words.size()==pos)
+        {
+            control.endup.setText("THIS PART IS COMPLETED");
+        }
+        else {
+            control.word.setText(words.get(pos).word);
+            control.meaning.setText(words.get(pos).mean);
+            control.sentence.setText(words.get(pos).senten);
+            pos++;
+
+        }
 
     }
     public  void startaction(ActionEvent event)
     {
-        if( wordarray.length==0)
+        if( words.size()-1==pos)
         {
-            endup.setText("THIS PART IS COMPLETED");
+            endup.setText("THIS SECTION IS COMPLETED :-)");
         }
         else {
-            word.setText(wordarray[pos].word);
-            meaning.setText(wordarray[pos].mean);
-            sentence.setText(wordarray[pos].senten);
+            word.setText(words.get(pos).word.toUpperCase());
+            meaning.setText(words.get(pos).mean);
+            sentence.setText(words.get(pos).senten);
             pos++;
+            meaning.setEditable(false);
+            sentence.setEditable(false);
 
         }
     }
     public  void nextaction(ActionEvent event)
     {
-        if(pos==wordarray.length) {
-            endup.setText("THIS PART IS COMPLETED");
+        if( words.size()-1==pos)
+        {
+            endup.setText("THIS SECTION IS COMPLETED :-)");
+        }
+        else {
+            word.setText(words.get(pos).word.toUpperCase());
+            meaning.setText(words.get(pos).mean);
+            sentence.setText(words.get(pos).senten);
+            pos++;
+            meaning.setEditable(false);
+            sentence.setEditable(false);
+
         }
 
     }
 
+}
+class Node
+{
+    String word;
+    String mean;
+    String senten;
+    Node(String w,String m,String s)
+    {
+        word=w;
+        mean=m;
+        senten=s;
+    }
 }
