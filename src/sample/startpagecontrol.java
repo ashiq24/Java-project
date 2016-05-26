@@ -24,7 +24,6 @@ public class startpagecontrol {
     {
         wordscontrol control;
         wordscontrol.file=new File("D:\\GRE word practice\\easywords.txt");
-
         FXMLLoader fxml=new FXMLLoader();
         fxml.setLocation(getClass().getResource("wordprac.fxml"));
         Parent homescene = fxml.load();
@@ -32,7 +31,6 @@ public class startpagecontrol {
         Stage homesateg= (Stage) ((Node) enent.getSource()).getScene().getWindow();
         control=(wordscontrol) fxml.getController();
         wordscontrol.loadthings(control);
-        homesateg.hide();
         homesateg.setScene(startpage);
         homesateg.show();
 

@@ -2,25 +2,25 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="635.0" style="-fx-background-color: magenta;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.wordscontrol">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="635.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.wordscontrol">
    <children>
-      <Button fx:id="next" layoutX="545.0" layoutY="32.0" mnemonicParsing="false" onAction="#nextaction" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="NEXT" textFill="#b51515" />
-      <Button fx:id="formore" layoutX="459.0" layoutY="368.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="162.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="MORE ABOUT THIS WORD" textFill="#b51515" />
-      <Button fx:id="word" layoutX="81.0" layoutY="22.0" mnemonicParsing="false" onAction="#startaction" prefHeight="77.0" prefWidth="337.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 3;" text="START !!!" textAlignment="RIGHT" textFill="#760ed3">
+      <Button fx:id="next" layoutX="545.0" layoutY="32.0" mnemonicParsing="false" onAction="#nextaction" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="NEXT" textFill="#f1eff2" />
+      <Button fx:id="word" layoutX="81.0" layoutY="22.0" mnemonicParsing="false" onAction="#startaction" prefHeight="77.0" prefWidth="337.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 3;" text="START !!!" textAlignment="RIGHT" textFill="#e1cde4">
          <font>
             <Font name="Javanese Text" size="22.0" />
          </font>
       </Button>
-      <TextArea fx:id="meaning" layoutX="74.0" layoutY="131.0" prefHeight="94.0" prefWidth="550.0" promptText="meaning" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;">
+      <TextArea fx:id="meaning" editable="false" layoutX="74.0" layoutY="131.0" prefHeight="94.0" prefWidth="550.0" promptText="meaning" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;">
          <font>
             <Font name="Lucida Bright Demibold Italic" size="16.0" />
          </font>
       </TextArea>
-      <TextArea fx:id="sentence" layoutX="74.0" layoutY="255.0" prefHeight="104.0" prefWidth="550.0" promptText="sentence" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;">
+      <TextArea fx:id="sentence" editable="false" layoutX="74.0" layoutY="255.0" prefHeight="104.0" prefWidth="550.0" promptText="sentence" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;">
          <font>
             <Font name="Gabriola" size="19.0" />
          </font>
@@ -40,14 +40,21 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="endup" layoutX="14.0" layoutY="397.0" prefHeight="29.0" prefWidth="293.0" textFill="#0b46da">
+      <Label fx:id="endup" layoutX="23.0" layoutY="445.0" prefHeight="29.0" prefWidth="293.0" textFill="#0d0ed9">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Button fx:id="home" layoutX="525.0" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="HOME" textFill="#b51515" />
-      <Button fx:id="formore1" layoutX="23.0" layoutY="491.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="162.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="Already know this ??" textFill="#b51515" />
-      <Button fx:id="next1" layoutX="260.0" layoutY="497.0" mnemonicParsing="false" onAction="#nextaction" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="YES" textFill="#b51515" />
+      <Button fx:id="home" layoutX="525.0" layoutY="445.0" mnemonicParsing="false" onAction="#homeaction" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="HOME" textFill="#a0afd3" />
+      <Button fx:id="Yes" layoutX="260.0" layoutY="497.0" mnemonicParsing="false" onAction="#yesaction" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="YES" textFill="#b51515" />
       <Button fx:id="next2" layoutX="357.0" layoutY="497.0" mnemonicParsing="false" onAction="#nextaction" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: violet; -fx-border-color: white; -fx-border-width: 2;" text="NO" textFill="#b51515" />
+      <ProgressBar fx:id="progress" layoutX="12.0" layoutY="408.0" prefHeight="18.0" prefWidth="401.0" progress="0.0" />
+      <Button fx:id="formore" layoutX="464.0" layoutY="369.0" mnemonicParsing="false" onAction="#formoreaction" prefHeight="18.0" prefWidth="162.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="MORE ABOUT THIS WORD" textFill="#f1eff2" />
+      <Button fx:id="next11" layoutX="36.0" layoutY="497.0" mnemonicParsing="false" onAction="#nextaction" prefHeight="18.0" prefWidth="162.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="ALREADY KNOW THIS??" textFill="#f1eff2" />
+      <Label fx:id="notify" layoutX="32.0" layoutY="383.0" prefHeight="17.0" prefWidth="262.0" textFill="#0b1586">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
