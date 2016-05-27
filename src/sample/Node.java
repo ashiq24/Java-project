@@ -5,12 +5,12 @@ import java.util.Comparator;
 /**
  * Created by Ashiq on 5/23/2016.
  */
-class Node implements Comparator<Node>,Comparable<Node>
+public class Node implements Comparator<Node>,Comparable<Node>
 {
-    String word;
-    String mean;
-    String senten;
-    Node(String w,String m,String s)
+    public String word;
+    public  String mean;
+    public String senten;
+    public Node(String w,String m,String s)
     {
         word=w;
         mean=m;

@@ -21,7 +21,7 @@
          </font>
       </Button>
       <PasswordField fx:id="pass" layoutX="347.0" layoutY="235.0" prefHeight="25.0" prefWidth="173.0" promptText="Password" visible="false" />
-      <Button layoutX="208.0" layoutY="417.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="Log in from an existing account" textFill="#c3d3ce">
+      <Button fx:id="recordlogin" layoutX="208.0" layoutY="417.0" mnemonicParsing="false" onAction="#recordlogin" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="Log in from an existing account" textFill="#c3d3ce">
          <font>
             <Font name="Gabriola" size="24.0" />
          </font>
@@ -46,5 +46,12 @@
             <Font name="Gabriola" size="21.0" />
          </font>
       </Button>
+      <Button fx:id="login3" layoutX="525.0" layoutY="421.0" mnemonicParsing="false" onAction="#login3action" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: indigo; -fx-border-color: white;" text="Log in" textFill="#c3d3ce" visible="false">
+         <font>
+            <Font name="Gabriola" size="21.0" />
+         </font>
+      </Button>
+      <TextField fx:id="name2" layoutX="48.0" layoutY="422.0" prefHeight="42.0" prefWidth="218.0" promptText="username" visible="false" />
+      <PasswordField fx:id="pass2" layoutX="306.0" layoutY="421.0" prefHeight="42.0" prefWidth="182.0" promptText="Password" visible="false" />
    </children>
 </AnchorPane>

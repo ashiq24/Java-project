@@ -1,2 +1,2 @@
-myname
-name
+pitbul
+dog

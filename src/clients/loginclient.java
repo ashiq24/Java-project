@@ -50,6 +50,10 @@ public class loginclient {
         return order;
 
     }
+    public  void close() throws IOException {
+        din.close();
+        dout.close();
+    }
 
 
 }

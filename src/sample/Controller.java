@@ -1,5 +1,6 @@
 package sample;
 
+import Loadserver.Clientmain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,15 +12,22 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Controller {
     public Label warning;
     public TextField name;
     public TextField pass;
+    public TextField name2;
+    public TextField pass2;
     public Button login1;
     public Button login2;
-
+    public Button login3;
+    public Button recordlogin;
+    public static ArrayList<sample.Node>Loadthings;
 
     public void login1(ActionEvent e)
     {
@@ -44,6 +52,7 @@ public class Controller {
             nam = name.getText();
             pas = pass.getText();
             if (nam.equals(Nam) && Pas.equals(pas)) {
+                Main.Uname=nam;
                Parent homescene = FXMLLoader.load(getClass().getResource("startpage.fxml"));
                 Scene startpage = new Scene(homescene, 650, 600);
                 Stage homesateg = (Stage) ((Node) e.getSource()).getScene().getWindow();
@@ -63,6 +72,38 @@ public class Controller {
         Stage homesateg = (Stage) ((Node) e.getSource()).getScene().getWindow();
         homesateg.setScene(startpage);
         homesateg.show();
+
+    }
+    public void recordlogin(ActionEvent e)
+    {
+        recordlogin.setVisible(false);
+        login3.setVisible(true);
+        name2.setVisible(true);
+        pass2.setVisible(true);
+    }
+    public  void  login3action(ActionEvent a) throws IOException {
+        Clientmain cm=new Clientmain();
+        String name=name2.getText().trim();
+        String pass=pass2.getText().trim();
+        if(cm.Nonet)
+        {
+            warning.setText("connetion is not avaiable");
+        }
+        else {
+            String ans = cm.validate(name, pass);
+            if (ans.equals("Match")) {
+                File f=new File("D:\\GRE word practice\\user.txt");
+                PrintWriter p=new PrintWriter(f);
+                p.println(name);
+                p.println(pass);
+                p.flush();
+                p.close();
+
+            } else {
+                warning.setText("no match found");
+            }
+        }
+
 
     }
 }

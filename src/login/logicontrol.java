@@ -37,6 +37,7 @@ public class logicontrol {
             lc.takeelem(Name.getText().trim(),Pass.getText().trim());
             lc.passit();
             s=lc.condition();
+            lc.close();
             System.out.println(s);
             if(s.equals("success"))
             {

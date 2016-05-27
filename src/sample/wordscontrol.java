@@ -1,5 +1,6 @@
 package sample;
 
+import Loadserver.Clientmain;
 import com.sun.deploy.uitoolkit.impl.fx.HostServicesFactory;
 import com.sun.javafx.application.HostServicesDelegate;
 import javafx.event.ActionEvent;
@@ -30,6 +31,7 @@ public class wordscontrol {
     public static ArrayList<Node > words;
     public static ArrayList<Node > knownwords;
     public static ArrayList<Node> kwords;
+    public static ArrayList<Node> Loadwords=new ArrayList<>();
     public static wordscontrol controler;
     public static  int pos;
     public static Node node;
@@ -163,6 +165,7 @@ public class wordscontrol {
     {
         if(words.size()!=0) {
             knownwords.add(node);
+            Loadwords.add(node);
             words.remove(node);
             pos--;
             notify.setText((knownwords.size()) + " Words out of " + size + " is completed");
@@ -220,6 +223,11 @@ public class wordscontrol {
         window.setTitle("HOME");
         window.setScene(homescene);
         window.show();
+        Clientmain cm=new Clientmain();
+        if(!Clientmain.Nonet)
+        {
+            cm.Upadte(Loadwords);
+        }
 
 
     }
