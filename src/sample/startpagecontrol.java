@@ -1,7 +1,9 @@
 package sample;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
+import Loadserver.Clientmain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -30,6 +32,7 @@ public class startpagecontrol {
         Scene startpage=new Scene (homescene,650,600);
         Stage homesateg= (Stage) ((Node) enent.getSource()).getScene().getWindow();
         control=(wordscontrol) fxml.getController();
+        //control.Lwords=new ArrayList<>();
         wordscontrol.loadthings(control);
         homesateg.setScene(startpage);
         homesateg.show();
@@ -48,8 +51,13 @@ public class startpagecontrol {
     {
 
     }
-    public void exitaction(ActionEvent enent)
-    {
+    public void exitaction(ActionEvent enent) throws IOException {
+        Clientmain cm=new Clientmain(9000);
+        if(!Clientmain.Nonet)
+        {
+            cm.Upadte(wordscontrol.Lwords);
+
+        }
         Stage homesateg= (Stage) ((Node) enent.getSource()).getScene().getWindow();
         homesateg.close();
 

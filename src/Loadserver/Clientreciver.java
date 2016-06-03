@@ -4,6 +4,7 @@ import sample.Controller;
 import sample.Node;
 
 import java.io.*;
+import java.net.Socket;
 import java.util.ArrayList;
 
 /**
@@ -11,30 +12,37 @@ import java.util.ArrayList;
  */
 public class Clientreciver implements Runnable{
     DataInputStream din;
+    DataOutputStream dout;
+    Socket soket;
+    Clientmain cm;
     String s="s";
+    String S;
     Thread t;
-    Clientreciver(DataInputStream din)
-    {
-        this.din=din;
+    Clientreciver(Socket soc, Clientmain cm, String s) throws IOException {
+        soket=soc;
+        din=new DataInputStream(soc.getInputStream());
+        dout=new DataOutputStream(soc.getOutputStream());
+        S=new String(s);
+        dout.writeUTF(S);
+        dout.flush();
         Controller.Loadthings=new ArrayList<>();
+        this.cm=cm;
         t=new Thread(this);
+
         t.start();
     }
     @Override
     public void run() {
-        try {
-            s=din.readUTF();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(s);
+
         while(!s.equals("stop"))
         {
             try {
+                s=din.readUTF();
 
                 if(s.equals("nomatch"))
                 {
                     Clientmain.ans="no match";
+                    break;
                 }
                 else if(s.equals("Match"))
                 {
@@ -44,12 +52,21 @@ public class Clientreciver implements Runnable{
                     String[] s1 = s.split("#");
                     Controller.Loadthings.add(new Node(s1[0], s1[1], s1[2]));
                 }
-                s=din.readUTF();
+
                 System.out.println(s);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            catch (ArrayIndexOutOfBoundsException a)
+            {
 
+            }
+
+        }
+        try {
+            cm.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         File f=new File("D:\\GRE word practice\\known.txt");
 

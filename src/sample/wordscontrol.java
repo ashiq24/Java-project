@@ -31,7 +31,7 @@ public class wordscontrol {
     public static ArrayList<Node > words;
     public static ArrayList<Node > knownwords;
     public static ArrayList<Node> kwords;
-    public static ArrayList<Node> Loadwords=new ArrayList<>();
+    public static  ArrayList<Node> Lwords=new ArrayList<>();
     public static wordscontrol controler;
     public static  int pos;
     public static Node node;
@@ -47,6 +47,7 @@ public class wordscontrol {
     public TextArea meaning;
     public TextArea sentence;
     public static void loadthings(wordscontrol control){
+
         Scanner fscan,fscan2;
         controler=control;
         words=new ArrayList<>() ;
@@ -66,7 +67,7 @@ public class wordscontrol {
            }
        }catch (FileNotFoundException e)
        {
-           System.out.println(e);
+
        }
         size=words.size();
        kwords=new ArrayList<>();
@@ -75,11 +76,12 @@ public class wordscontrol {
         try
         {
             fscan2=new Scanner(f);
-            while(fscan2.hasNextLine())
+            String w;
+            String m;
+            String s;
+            while(fscan2.hasNext())
             {
-                String w;
-                String m;
-                String s;
+
                 w=fscan2.nextLine();
                 m=fscan2.nextLine();
                 s=fscan2.nextLine();
@@ -88,12 +90,13 @@ public class wordscontrol {
             }
         }catch (Exception e)
         {
+            System.out.println("ttttttttttttttttttttttttttttttttt");
 
         }
 
         knownwords.addAll(kwords);
         System.out.println(knownwords.size());
-        knownwords.retainAll(words);
+        //knownwords.retainAll(words);
         System.out.println(knownwords.size());
         words.removeAll(knownwords);
         kwords.removeAll(knownwords);
@@ -114,6 +117,7 @@ public class wordscontrol {
         }
 
     }
+
     public  void startaction(ActionEvent event)
     {
         if(words.size()==0)
@@ -165,7 +169,7 @@ public class wordscontrol {
     {
         if(words.size()!=0) {
             knownwords.add(node);
-            Loadwords.add(node);
+            Lwords.add(node);
             words.remove(node);
             pos--;
             notify.setText((knownwords.size()) + " Words out of " + size + " is completed");
@@ -215,6 +219,7 @@ public class wordscontrol {
             p.println(x.senten);
         }
         p.close();
+
         FXMLLoader fxml=new FXMLLoader();
         fxml.setLocation(getClass().getResource("startpage.fxml"));
         Parent home=fxml.load();
@@ -223,11 +228,7 @@ public class wordscontrol {
         window.setTitle("HOME");
         window.setScene(homescene);
         window.show();
-        Clientmain cm=new Clientmain();
-        if(!Clientmain.Nonet)
-        {
-            cm.Upadte(Loadwords);
-        }
+
 
 
     }

@@ -42,7 +42,7 @@ public class Controller {
         Scanner s = new Scanner(f);
         String Nam, Pas;
         if (!s.hasNext()) {
-            warning.setText("Please creat an account!!!");
+            warning.setText("Please create an account!!!");
         }
         else
         {
@@ -53,7 +53,7 @@ public class Controller {
             pas = pass.getText();
             if (nam.equals(Nam) && Pas.equals(pas)) {
                 Main.Uname=nam;
-               Parent homescene = FXMLLoader.load(getClass().getResource("startpage.fxml"));
+                Parent homescene = FXMLLoader.load(getClass().getResource("startpage.fxml"));
                 Scene startpage = new Scene(homescene, 650, 600);
                 Stage homesateg = (Stage) ((Node) e.getSource()).getScene().getWindow();
                 homesateg.setScene(startpage);
@@ -82,7 +82,7 @@ public class Controller {
         pass2.setVisible(true);
     }
     public  void  login3action(ActionEvent a) throws IOException {
-        Clientmain cm=new Clientmain();
+        Clientmain cm=new Clientmain(9000);
         String name=name2.getText().trim();
         String pass=pass2.getText().trim();
         if(cm.Nonet)
@@ -96,8 +96,14 @@ public class Controller {
                 PrintWriter p=new PrintWriter(f);
                 p.println(name);
                 p.println(pass);
+                Main.Uname=new String(name);
                 p.flush();
                 p.close();
+                Parent homescene = FXMLLoader.load(getClass().getResource("startpage.fxml"));
+                Scene startpage = new Scene(homescene, 650, 600);
+                Stage homesateg = (Stage) ((Node) a.getSource()).getScene().getWindow();
+                homesateg.setScene(startpage);
+                homesateg.show();
 
             } else {
                 warning.setText("no match found");

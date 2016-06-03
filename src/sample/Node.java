@@ -29,10 +29,10 @@ public class Node implements Comparator<Node>,Comparable<Node>
     public boolean equals(Object n)
     {
         Node m=(Node)n;
-        return word.equals((m.word));
+        return word.equalsIgnoreCase((m.word));
     }
     public int hashCode()
     {
-        return word.hashCode();
+        return word.toLowerCase().hashCode();
     }
 }
