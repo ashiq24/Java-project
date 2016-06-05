@@ -37,6 +37,13 @@ public class Controller {
         login2.setVisible(true);
 
     }
+    public void nologon( ActionEvent e) throws IOException {
+        Parent homescene = FXMLLoader.load(getClass().getResource("startpage.fxml"));
+        Scene startpage = new Scene(homescene, 650, 600);
+        Stage homesateg = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        homesateg.setScene(startpage);
+        homesateg.show();
+    }
     public void loginaction(ActionEvent e) throws Exception {
         File f = new File("D:\\GRE word practice\\user.txt");
         Scanner s = new Scanner(f);

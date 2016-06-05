@@ -20,6 +20,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -32,17 +33,21 @@ public class wordscontrol {
     public static ArrayList<Node > knownwords;
     public static ArrayList<Node> kwords;
     public static  ArrayList<Node> Lwords=new ArrayList<>();
+    public static ArrayList<Node> nextwords;
+    public static ArrayList<Node> nextthis;
     public static wordscontrol controler;
     public static  int pos;
     public static Node node;
     public Label endup;
     public Label notify;
+    public Label nextnoti;
     public static int size;
     public Button word;
     public Button home;
     public Button Yes;
     public Button next;
     public ProgressBar progress;
+    public ProgressBar nextprogress;
     public Button formore;
     public TextArea meaning;
     public TextArea sentence;
@@ -94,15 +99,46 @@ public class wordscontrol {
 
         }
 
+
+        ////// adding next words action.....
+        nextwords=new ArrayList<>();
+        f=new File("D:\\GRE word practice\\next.txt");
+        try
+        {
+            fscan2=new Scanner(f);
+            String w;
+            String m;
+            String s;
+            while(fscan2.hasNext())
+            {
+
+                w=fscan2.nextLine();
+                m=fscan2.nextLine();
+                s=fscan2.nextLine();
+                Node n=new Node(w,m,s);
+                nextwords.add(n);
+            }
+        }catch (Exception e)
+        {
+            System.out.println("000000");
+
+        }
+        nextthis=new ArrayList<>(nextwords);
+        System.out.println("------------"+nextwords.size());
+        nextthis.retainAll(words);
+        nextwords.removeAll(nextthis);
+        //////
         knownwords.addAll(kwords);
         System.out.println(knownwords.size());
-        //knownwords.retainAll(words);
+        knownwords.retainAll(words);
         System.out.println(knownwords.size());
         words.removeAll(knownwords);
         kwords.removeAll(knownwords);
         pos=0;
         control.notify.setText(knownwords.size()+" Words out of "+size+ " is completed");
+        control.nextnoti.setText("You r reviewing "+nextthis.size()+" Words out of "+size);
         control.progress.setProgress((knownwords.size()) * 1.0 / size);
+        control.nextprogress.setProgress((nextthis.size()) * 1.0 / size);
         if( words.size()==pos)
         {
             control.endup.setText("THIS PART IS COMPLETED");
@@ -118,82 +154,32 @@ public class wordscontrol {
 
     }
 
-    public  void startaction(ActionEvent event)
-    {
-        if(words.size()==0)
-        {
-            endup.setText("THIS SECTION IS COMPLETED :-)");
-        }
-        else if( words.size()-1==pos)
-        {
-            pos=0;
-            node=words.get(pos);
-            word.setText(words.get(pos).word.toUpperCase());
-            meaning.setText(words.get(pos).mean);
-            sentence.setText(words.get(pos).senten);
-            pos++;
-        }
-        else {
-            node=words.get(pos);
-            word.setText(words.get(pos).word.toUpperCase());
-            meaning.setText(words.get(pos).mean);
-            sentence.setText(words.get(pos).senten);
-            pos++;
-        }
-    }
+
     public  void nextaction(ActionEvent event)
     {
-        if(words.size()==0)
-        {
-            endup.setText("THIS SECTION IS COMPLETED :-)");
+        if(words.size()!=0) {
+            if (!nextthis.contains(node)) {
+                nextthis.add(node);
+                System.out.println(node.word);
+            } else {
+                //System.out.println("==="+node.word);
+            }
+            nextnoti.setText("You r reviewing " + nextthis.size() + " Words out of " + size);
+            nextprogress.setProgress((nextthis.size()) * 1.0 / size);
+            probable();
         }
-        else if( words.size()-1<=pos)
-        {
-            pos=0;
-            node=words.get(pos);
-            word.setText(words.get(pos).word.toUpperCase());
-            meaning.setText(words.get(pos).mean);
-            sentence.setText(words.get(pos).senten);
-            pos++;
-        }
-        else {
-            node=words.get(pos);
-            word.setText(words.get(pos).word.toUpperCase());
-            meaning.setText(words.get(pos).mean);
-            sentence.setText(words.get(pos).senten);
-            pos++;
-        }
-
     }
     public void yesaction(ActionEvent event)
     {
         if(words.size()!=0) {
-            knownwords.add(node);
-            Lwords.add(node);
             words.remove(node);
-            pos--;
-            notify.setText((knownwords.size()) + " Words out of " + size + " is completed");
+            knownwords.add(node);
+            nextthis.remove(node);
+            notify.setText(knownwords.size() + " Words out of " + size + " is completed");
             progress.setProgress((knownwords.size()) * 1.0 / size);
-        }
-        if(words.size()==0)
-        {
-            endup.setText("THIS SECTION IS COMPLETED :-)");
-        }
-        else if( words.size()-1<pos)
-        {
-            pos=0;
-            node=words.get(pos);
-            word.setText(words.get(pos).word.toUpperCase());
-            meaning.setText(words.get(pos).mean);
-            sentence.setText(words.get(pos).senten);
-            pos++;
-        }
-        else {
-            node=words.get(pos);
-            word.setText(words.get(pos).word.toUpperCase());
-            meaning.setText(words.get(pos).mean);
-            sentence.setText(words.get(pos).senten);
-            pos++;
+            nextnoti.setText("You r reviewing " + nextthis.size() + " Words out of " + size);
+            nextprogress.setProgress((nextthis.size()) * 1.0 / size);
+            probable();
         }
     }
     public void formoreaction(ActionEvent event) throws IOException, URISyntaxException {
@@ -219,7 +205,20 @@ public class wordscontrol {
             p.println(x.senten);
         }
         p.close();
-
+        ///// next words
+        nextwords.addAll(nextthis);
+        System.out.println("------------"+nextwords.size());
+        p=new PrintWriter("D:\\GRE word practice\\next.txt");
+        p.close();
+        p=new PrintWriter("D:\\GRE word practice\\next.txt");
+        for(Node x: nextwords)
+        {
+            p.println(x.word);
+            p.println(x.mean);
+            p.println(x.senten);
+        }
+        p.close();
+        //////
         FXMLLoader fxml=new FXMLLoader();
         fxml.setLocation(getClass().getResource("startpage.fxml"));
         Parent home=fxml.load();
@@ -228,9 +227,44 @@ public class wordscontrol {
         window.setTitle("HOME");
         window.setScene(homescene);
         window.show();
-
-
+    }
+    public void probable()
+    {
+        Random r=new Random();
+        int i=r.nextInt(1000)%size;
+        System.out.println(i+"  "+ nextthis.size());
+        if(words.size()==0) endup.setText("THIS PART IS COMPLETED");
+        else if(nextthis.size()==0 ||i>=nextthis.size())
+        {
+            pos++;
+            System.out.println("??");
+            if(pos>=words.size())
+            {
+                pos=0;
+                node=words.get(pos);
+                word.setText(words.get(pos).word);
+                meaning.setText(words.get(pos).mean);
+                sentence.setText(words.get(pos).senten);
+                pos++;
+            }
+            else
+            {
+                node=words.get(pos);
+                word.setText(words.get(pos).word);
+                meaning.setText(words.get(pos).mean);
+                sentence.setText(words.get(pos).senten);
+                pos++;
+            }
+        }
+        else if(nextthis.size()!=0)
+        {
+            int j=new Random().nextInt();
+            if(j<0)j=j*-1;
+            node=nextthis.get(j%nextthis.size());
+            word.setText(node.word.toUpperCase());
+            meaning.setText(node.mean);
+            sentence.setText(node.senten);
+        }
 
     }
-
 }

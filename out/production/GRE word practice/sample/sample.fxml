@@ -14,13 +14,13 @@
             <Font name="Britannic Bold" size="46.0" />
          </font>
       </Button>
-      <TextField fx:id="name" layoutX="91.0" layoutY="235.0" prefHeight="25.0" prefWidth="173.0" promptText="username" visible="false" />
-      <Button fx:id="login2" layoutX="558.0" layoutY="235.0" mnemonicParsing="false" onAction="#loginaction" style="-fx-background-color: indigo; -fx-border-color: white;" text="Log in" textFill="#c3d3ce" visible="false">
+      <TextField fx:id="name" layoutX="53.0" layoutY="236.0" prefHeight="31.0" prefWidth="211.0" promptText="username" visible="false" />
+      <Button fx:id="login2" layoutX="540.0" layoutY="235.0" mnemonicParsing="false" onAction="#loginaction" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: indigo; -fx-border-color: white;" text="Log in" textFill="#c3d3ce" visible="false">
          <font>
             <Font name="Gadugi" size="12.0" />
          </font>
       </Button>
-      <PasswordField fx:id="pass" layoutX="347.0" layoutY="235.0" prefHeight="25.0" prefWidth="173.0" promptText="Password" visible="false" />
+      <PasswordField fx:id="pass" layoutX="309.0" layoutY="235.0" prefHeight="31.0" prefWidth="211.0" promptText="Password" visible="false" />
       <Button fx:id="recordlogin" layoutX="208.0" layoutY="417.0" mnemonicParsing="false" onAction="#recordlogin" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="Log in from an existing account" textFill="#c3d3ce">
          <font>
             <Font name="Gabriola" size="24.0" />
