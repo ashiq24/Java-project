@@ -27,16 +27,19 @@ public class Clientmain implements Runnable{
     public Clientmain(int n)
     {
         try {
-            client=new Socket("Localhost",n);
+            System.out.println("nnnnnnnnn");
+            client=new Socket("192.168.6.16",n);
+            System.out.println("nnnnnnnnn");
             din=new DataInputStream(client.getInputStream());
             dout=new DataOutputStream(client.getOutputStream());
 
-        } catch (IOException e) {
+        } catch (Exception e) {
            Nonet=true;
         }
+
     }
     public void Upadte(ArrayList<Node> Alist) throws IOException {
-        Clientmain.Alist.addAll(Alist);
+        Clientmain.Alist=new ArrayList<>(Alist);
         update=new Thread(this);
         update.start();
 

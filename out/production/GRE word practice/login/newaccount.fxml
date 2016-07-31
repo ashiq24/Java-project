@@ -13,19 +13,25 @@
             <Font name="Consolas" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="Name" layoutX="135.0" layoutY="86.0" prefHeight="25.0" prefWidth="280.0" />
+      <TextField fx:id="Name" layoutX="135.0" layoutY="86.0" prefHeight="25.0" prefWidth="280.0" promptText="username without space" />
       <Label layoutX="48.0" layoutY="126.0" prefHeight="25.0" prefWidth="80.0" text="password:" textFill="#ebe5e5">
          <font>
             <Font name="Consolas" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="Pass" layoutX="135.0" layoutY="126.0" prefHeight="25.0" prefWidth="280.0" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="335.0" layoutY="211.0" mnemonicParsing="false" onAction="#creataction" prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: black; -fx-border-color: white;" text="DONE" textFill="#dad4d4" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="335.0" layoutY="209.0" mnemonicParsing="false" onAction="#creataction" prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: black; -fx-border-color: white;" text="DONE" textFill="#dad4d4">
+         <font>
+            <Font name="Gabriola" size="19.0" />
+         </font></Button>
       <Label fx:id="warning" layoutX="121.0" layoutY="319.0" prefHeight="25.0" prefWidth="253.0" textFill="#e80606">
          <font>
             <Font name="Georgia" size="15.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="335.0" layoutY="268.0" mnemonicParsing="false" onAction="#returnaction" prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: black; -fx-border-color: white;" text="BACK" textFill="#dad4d4" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="335.0" layoutY="268.0" mnemonicParsing="false" onAction="#returnaction" prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: black; -fx-border-color: white;" text="BACK" textFill="#dad4d4">
+         <font>
+            <Font name="Gabriola" size="18.0" />
+         </font></Button>
+      <TextField fx:id="Pass" layoutX="135.0" layoutY="126.0" prefHeight="25.0" prefWidth="280.0" promptText="password without space" />
    </children>
 </AnchorPane>

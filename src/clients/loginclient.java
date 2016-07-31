@@ -21,7 +21,7 @@ public class loginclient {
     public static  String  order;
     public loginclient(){
         try {
-            client=new Socket("Localhost",8000);
+            client=new Socket("192.168.6.16",8000);
             din=new DataInputStream(client.getInputStream());
             dout=new DataOutputStream(client.getOutputStream());
             new clientreceiver(din);

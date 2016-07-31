@@ -29,7 +29,7 @@ public class startpagecontrol {
         FXMLLoader fxml=new FXMLLoader();
         fxml.setLocation(getClass().getResource("wordprac.fxml"));
         Parent homescene = fxml.load();
-        Scene startpage=new Scene (homescene,650,600);
+        Scene startpage=new Scene (homescene,650,650);
         Stage homesateg= (Stage) ((Node) enent.getSource()).getScene().getWindow();
         control=(wordscontrol) fxml.getController();
         //control.Lwords=new ArrayList<>();
@@ -38,9 +38,19 @@ public class startpagecontrol {
         homesateg.show();
 
     }
-    public void mediumaction(ActionEvent enent)
-    {
-
+    public void mediumaction(ActionEvent enent) throws IOException {
+        wordscontrol control;
+        wordscontrol.file=new File("D:\\GRE word practice\\easywords2.txt");
+        FXMLLoader fxml=new FXMLLoader();
+        fxml.setLocation(getClass().getResource("wordprac.fxml"));
+        Parent homescene = fxml.load();
+        Scene startpage=new Scene (homescene,650,650);
+        Stage homesateg= (Stage) ((Node) enent.getSource()).getScene().getWindow();
+        control=(wordscontrol) fxml.getController();
+        //control.Lwords=new ArrayList<>();
+        wordscontrol.loadthings(control);
+        homesateg.setScene(startpage);
+        homesateg.show();
     }
     public void hardaction(ActionEvent enent)
     {
@@ -55,6 +65,7 @@ public class startpagecontrol {
         Clientmain cm=new Clientmain(9000);
         if(!Clientmain.Nonet)
         {
+            System.out.println(wordscontrol.Lwords.size());
             cm.Upadte(wordscontrol.Lwords);
 
         }

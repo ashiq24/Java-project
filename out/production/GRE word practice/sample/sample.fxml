@@ -4,29 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="649.0" style="-fx-background-color: black; -fx-border-color: white;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button layoutX="39.0" layoutY="14.0" mnemonicParsing="false" prefHeight="166.0" prefWidth="571.0" style="-fx-border-color: violet; -fx-border-width: 3; -fx-background-color: black;" text="GRE WORD PRACTICE" textFill="WHITE">
+      <Button layoutX="39.0" layoutY="14.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="571.0" style="-fx-border-color: green; -fx-border-width: 3; -fx-background-color: black;" text="GRE WORD PRACTICE" textFill="#eee8e8">
          <font>
-            <Font name="Britannic Bold" size="46.0" />
+            <Font name="Gabriola" size="56.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.18" fraction="0.79" topOpacity="0.18" />
+         </effect>
+      </Button>
+      <TextField fx:id="name" layoutX="56.0" layoutY="290.0" prefHeight="31.0" prefWidth="218.0" promptText="username" visible="false" />
+      <Button fx:id="login2" layoutX="553.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginaction" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: indigo; -fx-border-color: white;" text="Log in" textFill="#e0e8e5" visible="false">
+         <font>
+            <Font name="Gabriola" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="name" layoutX="53.0" layoutY="236.0" prefHeight="31.0" prefWidth="211.0" promptText="username" visible="false" />
-      <Button fx:id="login2" layoutX="540.0" layoutY="235.0" mnemonicParsing="false" onAction="#loginaction" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: indigo; -fx-border-color: white;" text="Log in" textFill="#c3d3ce" visible="false">
-         <font>
-            <Font name="Gadugi" size="12.0" />
-         </font>
-      </Button>
-      <PasswordField fx:id="pass" layoutX="309.0" layoutY="235.0" prefHeight="31.0" prefWidth="211.0" promptText="Password" visible="false" />
-      <Button fx:id="recordlogin" layoutX="208.0" layoutY="417.0" mnemonicParsing="false" onAction="#recordlogin" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="Log in from an existing account" textFill="#c3d3ce">
+      <PasswordField fx:id="pass" layoutX="325.0" layoutY="293.0" prefHeight="31.0" prefWidth="211.0" promptText="Password" visible="false" />
+      <Button fx:id="recordlogin" layoutX="218.0" layoutY="438.0" mnemonicParsing="false" onAction="#recordlogin" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="Log in from an existing account" textFill="#c3d3ce">
          <font>
             <Font name="Gabriola" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="206.0" layoutY="328.0" mnemonicParsing="false" onAction="#newaccaction" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="Creat new account" textFill="#c3d3ce">
+      <Button layoutX="208.0" layoutY="349.0" mnemonicParsing="false" onAction="#newaccaction" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="Creat new account" textFill="#c3d3ce">
          <font>
             <Font name="Gabriola" size="24.0" />
          </font>
@@ -36,12 +40,12 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Button layoutX="341.0" layoutY="513.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="continue without account" textFill="#c3d3ce">
+      <Button layoutX="341.0" layoutY="513.0" mnemonicParsing="false" onAction="#nologon" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: indigo; -fx-border-color: white; -fx-border-width: 2;" text="continue without account" textFill="#c3d3ce">
          <font>
             <Font name="Gabriola" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="login1" layoutX="292.0" layoutY="276.0" mnemonicParsing="false" onAction="#login1" prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: indigo; -fx-border-color: white;" text="Log in" textFill="#c3d3ce">
+      <Button fx:id="login1" layoutX="287.0" layoutY="284.0" mnemonicParsing="false" onAction="#login1" prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: indigo; -fx-border-color: white;" text="Log in" textFill="#c3d3ce">
          <font>
             <Font name="Gabriola" size="21.0" />
          </font>

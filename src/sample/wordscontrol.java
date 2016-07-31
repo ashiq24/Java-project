@@ -137,6 +137,8 @@ public class wordscontrol {
         pos=0;
         control.notify.setText(knownwords.size()+" Words out of "+size+ " is completed");
         control.nextnoti.setText("You r reviewing "+nextthis.size()+" Words out of "+size);
+        control.progress.setStyle("-fx-accent: blue;-fx-border-color:indigo;");
+        control.nextprogress.setStyle("-fx-border-color:blue;-fx-accent: black;");
         control.progress.setProgress((knownwords.size()) * 1.0 / size);
         control.nextprogress.setProgress((nextthis.size()) * 1.0 / size);
         if( words.size()==pos)
@@ -175,6 +177,7 @@ public class wordscontrol {
             words.remove(node);
             knownwords.add(node);
             nextthis.remove(node);
+            Lwords.add(node);
             notify.setText(knownwords.size() + " Words out of " + size + " is completed");
             progress.setProgress((knownwords.size()) * 1.0 / size);
             nextnoti.setText("You r reviewing " + nextthis.size() + " Words out of " + size);
@@ -242,7 +245,7 @@ public class wordscontrol {
             {
                 pos=0;
                 node=words.get(pos);
-                word.setText(words.get(pos).word);
+                word.setText(words.get(pos).word.toUpperCase());
                 meaning.setText(words.get(pos).mean);
                 sentence.setText(words.get(pos).senten);
                 pos++;
@@ -250,7 +253,7 @@ public class wordscontrol {
             else
             {
                 node=words.get(pos);
-                word.setText(words.get(pos).word);
+                word.setText(words.get(pos).word.toUpperCase());
                 meaning.setText(words.get(pos).mean);
                 sentence.setText(words.get(pos).senten);
                 pos++;

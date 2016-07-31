@@ -10,9 +10,9 @@
 
 <AnchorPane minHeight="600.0" minWidth="600.0" prefHeight="472.0" prefWidth="657.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.startpagecontrol">
    <children>
-      <ScrollPane hbarPolicy="ALWAYS" layoutX="14.0" layoutY="76.0" prefHeight="524.0" prefWidth="233.0" style="-fx-border-insets: 1; -fx-border-width: 1;" vbarPolicy="ALWAYS">
+      <ScrollPane hbarPolicy="ALWAYS" layoutX="14.0" layoutY="76.0" prefHeight="499.0" prefWidth="230.0" style="-fx-border-insets: 1; -fx-border-width: 1;" vbarPolicy="ALWAYS">
          <content>
-            <AnchorPane prefHeight="263.0" prefWidth="243.0" style="-fx-background-color: indigo;">
+            <AnchorPane prefHeight="263.0" prefWidth="243.0" style="-fx-background-color: black;">
                <children>
                   <Button layoutX="15.0" layoutY="28.0" mnemonicParsing="false" onAction="#easyaction" prefHeight="94.0" prefWidth="184.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="EASY" textFill="WHITE">
                      <font>
@@ -22,7 +22,7 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </Button>
-                  <Button layoutX="14.0" layoutY="124.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="184.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="EASY-1" textAlignment="JUSTIFY" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="124.0" mnemonicParsing="false" onAction="#mediumaction" prefHeight="108.0" prefWidth="184.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="EASY-1" textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
                         <Font name="Gabriola" size="38.0" />
                      </font>
@@ -30,7 +30,7 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </Button>
-                  <Button layoutX="14.0" layoutY="230.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="184.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="EASY-2" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="230.0" mnemonicParsing="false" onAction="#easyaction" prefHeight="108.0" prefWidth="184.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="EASY-2" textFill="WHITE">
                      <font>
                         <Font name="Gabriola" size="38.0" />
                      </font>
@@ -38,7 +38,7 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </Button>
-                  <Button layoutX="14.0" layoutY="336.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="184.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="EASY-3" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="336.0" mnemonicParsing="false" onAction="#mediumaction" prefHeight="107.0" prefWidth="184.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 3;" text="EASY-3" textFill="WHITE">
                      <font>
                         <Font name="Gabriola" size="41.0" />
                      </font>
@@ -66,17 +66,17 @@
             </AnchorPane>
          </content>
       </ScrollPane>
-      <Button layoutX="10.0" layoutY="7.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="256.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 1;" text="Select Practice Mood" textFill="WHITE">
+      <Button layoutX="10.0" layoutY="7.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="256.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 2;" text="Select Practice Mood" textFill="WHITE">
          <font>
-            <Font size="19.0" />
+            <Font name="Gabriola" size="30.0" />
          </font>
          <effect>
             <InnerShadow choke="0.05" height="62.51" radius="26.307499999999997" width="44.72" />
          </effect>
       </Button>
-      <Button fx:id="exit" layoutX="549.0" layoutY="530.0" mnemonicParsing="false" onAction="#exitaction" prefHeight="31.0" prefWidth="71.0" style="-fx-background-color: red;" text="EXIT">
+      <Button fx:id="exit" layoutX="542.0" layoutY="530.0" mnemonicParsing="false" onAction="#exitaction" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 2;" text="EXIT" textFill="#d30d0d">
          <font>
-            <Font name="Bell MT Bold" size="15.0" />
+            <Font name="Gabriola" size="19.0" />
          </font>
       </Button>
       <Region layoutX="270.0" layoutY="107.0" maxHeight="650.0" maxWidth="600.0" />

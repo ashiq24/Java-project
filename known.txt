@@ -1,60 +1,165 @@
 ﻿adjure (VERB)
 To command solemnly as if under oath
 EX: The witnesses were _____ed to avoid any contact with the accused.
-gormandize (VERB)
-To eat in a greedy
-EX: Tom's tendency to ________ eventually made him an unwelcome dinner guest.
-lustrous (ADJECTIVE)
-Radiant; shining
-EX: Gina's _______ eyes shimmered in the candlelight.
-imperious (ADJECTIVE)
-Haughty; to convey a sense of dictatorial arrogance
-EX: Mrs. Banks rushed around the kitchen, issuing a serious of _______ commands to the cook.
-paragon (NOUN)
-A peerless model or pattern of perfection; an absolute and often hypothetical standard
-EX: Even if we could live our lives in accordance with the ______s of right living, would we not still experience conflict and misunderstanding with others?
-boorish (ADJECTIVE)
-Offensive; lacking manners
-EX: Everett's ______ behavior at the party was completely out of character for him.
-eke (VERB)
-To supplement through adversity
-EX: Roger managed to ___ out an existence by working two jobs.
-lissome (ADJECTIVE)
-Supple, something that is easily bent
-EX: The ______ young gymnast's body seemed to defy the laws of physics.
-refurbish (VERB)
-To renovate or repair; to restore to a state of attractive completion
-EX: The housing project's volunteers _______ed the abandoned apartments in record time.
-tort (NOUN)
-A civil misdeed requiring compensation
-EX: You are incorrect in assuming this would be a criminal case; we are looking at a ____, not a crime.
-chagrin (NOUN)
-The emotion of humiliation or embarrassment arising from disheartening experience
-EX: Much to my ______, my application was rejected instantly.
-hallow (VERB)
-To establish as holy; to extend the highest possible honor towards something
-EX: This ancient burial ground, which is ______ed ground to many Native Americans, attracts a few too many tourists for my tastes.
-efflorescent (ADJECTIVE)
-Blossoming
-EX: The poet's middle years were marked by some remarkable and __________ work of unparalleled quality.
 theocentric (ADJECTIVE)
 Placing God at the center of a system of beliefs; that which focuses on God
 EX: You'll find this writer's philosophies a little more _________ than the last one we studied.
+efflorescent (ADJECTIVE)
+Blossoming
+EX: The poet's middle years were marked by some remarkable and __________ work of unparalleled quality.
 graft (NOUN)
 The unscrupulous use of rank or formal post for personal gain
 EX: The game had been sold out for months, and the mayor's easy acquisition of choice tickets led to whisperings of _____ in the administration.
-satiate (VERB)
-To satisfy beyond reasonable expectation; to consume to excess
-EX: If this Thanksgiving dinner doesn't ______ your appetite, nothing will.
-miscegenation (NOUN)
-Interbreeding between members of different racial groups
-EX: The musical Show Boat was daring for its time; certainly no previous show on Broadway has dared to examine an issue as sensitive as ________.
-vivacious (ADJECTIVE)
-Spirited; full of life
-EX: The novelist's characters are saucy and _______, but the situations they face are, alas, deadly dull.
+lissome (ADJECTIVE)
+Supple, something that is easily bent
+EX: The ______ young gymnast's body seemed to defy the laws of physics.
 propound (VERB)
 To set forth; to offer a theory for review or consideration
 EX: Dr. Richards _______ed his most complex mathematical theory yet at the conference.
+paragon (NOUN)
+A peerless model or pattern of perfection; an absolute and often hypothetical standard
+EX: Even if we could live our lives in accordance with the ______s of right living, would we not still experience conflict and misunderstanding with others?
+tort (NOUN)
+A civil misdeed requiring compensation
+EX: You are incorrect in assuming this would be a criminal case; we are looking at a ____, not a crime.
+boorish (ADJECTIVE)
+Offensive; lacking manners
+EX: Everett's ______ behavior at the party was completely out of character for him.
+chagrin (NOUN)
+The emotion of humiliation or embarrassment arising from disheartening experience
+EX: Much to my ______, my application was rejected instantly.
+eke (VERB)
+To supplement through adversity
+EX: Roger managed to ___ out an existence by working two jobs.
+imperious (ADJECTIVE)
+Haughty; to convey a sense of dictatorial arrogance
+EX: Mrs. Banks rushed around the kitchen, issuing a serious of _______ commands to the cook.
+refurbish (VERB)
+To renovate or repair; to restore to a state of attractive completion
+EX: The housing project's volunteers _______ed the abandoned apartments in record time.
+vivacious (ADJECTIVE)
+Spirited; full of life
+EX: The novelist's characters are saucy and _______, but the situations they face are, alas, deadly dull.
+gormandize (VERB)
+To eat in a greedy
+EX: Tom's tendency to ________ eventually made him an unwelcome dinner guest.
+miscegenation (NOUN)
+Interbreeding between members of different racial groups
+EX: The musical Show Boat was daring for its time; certainly no previous show on Broadway has dared to examine an issue as sensitive as ________.
+hallow (VERB)
+To establish as holy; to extend the highest possible honor towards something
+EX: This ancient burial ground, which is ______ed ground to many Native Americans, attracts a few too many tourists for my tastes.
 undulate (VERB)
 Move in a wavelike motion
 EX: After a hard day at work, Ellis would sit on the seashore and stare ahead at the ______ing ocean to ease his mind.
+lustrous (ADJECTIVE)
+Radiant; shining
+EX: Gina's _______ eyes shimmered in the candlelight.
+satiate (VERB)
+To satisfy beyond reasonable expectation; to consume to excess
+EX: If this Thanksgiving dinner doesn't ______ your appetite, nothing will.
+abase 
+lower; degrade; humiliate
+Anna expected to have to curtsy to the King of Siam; when told to cast herself down on the ground before him, however she refused to abase herself.
+abbreviate 
+shorten
+Because we were running out of time, the lecturer had to abbreviate her speech.
+abet 
+assist, usually in doing something wrong
+She was unwilling to abet him in the swindle he had planned.
+abjure 
+renounce upon oath
+He abjured his allegiance to the king.
+abominate 
+loathe; hate
+Moses scolded the idol worshippers in the tribe because he abominated the custom.
+accessory
+additional object; useful but not essential thing
+She bought an attractive handbag as an accessory for her dress.
+accolade
+award of merit
+In Hollywood, an "Oscar" is the highest accolade.
+accoutre
+equip
+The fisherman was accoutred with the best that the sporting goods store could supply
+abysmal
+bottomless
+His arrogance is exceeded only by his abysmal ignorance.
+accrue
+come about by addition
+You must pay the interest that has accrued on your debt as well as the principal sum.
+accord
+agreement
+She was in complete accord with the verdict.
+abash
+embarrass
+He was not at all abashed by her open admiration.
+aberrant
+abnormal or deviant
+Given the aberrant nature of the data, we came to doubt the validity of the entire experiment.
+ablution 
+washing
+His daily ablutions were accompanied by loud noises that he humorously labeled "Opera in the Bath."
+abrasive 
+rubbing away; tending to grind down
+Justas abrasive cleaning powders can wear away a shiny finish, abrasive remarks can wear away a listener's patience.
+abdicate
+renounce; give up
+When Edward VII abdicated the British throne, he surprised the entire world.
+accelerate
+move faster
+In our science class, we learn how falling bodies accelerate.
+absolve 
+pardon (an offense)
+The father confessor absolved him of his sins.
+abusive
+coarsely insulting; physically harmful
+An abusive parent damages a child both mentally and physically.
+abstain
+refrain; withhold from participation
+After considering the effect of alcohol on his athletic performance, he decided to abstain from drinking while he trained for the race.
+acclimate
+adjust to climate or environment
+One of the difficulties of our present air age is the need of travellers to acclimate themselves to their new an often strange environments.
+accretion
+growth, increase
+The accretion of wealth marked the family's rise in power.
+abate
+subside or moderate
+Rather than leaving immediately, they waited for the storm to abate.
+acclivity
+sharp upslope of a hill
+The car could not go up the acclivity in high gear.
+abnegation 
+renunciation; self-sacrifice
+Though Rudolph and Duchess Flavia loved one another, their love was doomed, for she had to wed the king; their act of abnegation was necessary to preserve the kingdom.
+abscond
+ depart secretly and hide
+The teller absconded with the bonds and was not found.
+abut
+border upon; adjoin
+Where our estates abut, we must build a fence.
+accost
+approach and speak first to a person
+When the two young men accosted me, I was frightened because I thought they were going to attack me.
+abeyance 
+suspended action
+The deal was held in abeyance until her arrival.
+abrogate
+abolish
+He intended to abrogate the decree issued by his predecessor.
+absolute
+ complete; totally unlimited; certain
+Although the King of Siam was an absolute monarch, he did not want to behead his unfaithful wife without absolute evidence of her infidelity.
+accessible
+easy to approach; obtainable
+We asked our guide whether the ruins were accessible on foot.
+abject 
+wretched; lacking pride
+On the streets of New York the homeless live in abject poverty, huddling in doorways to find shelter from the wind.
+accede
+agree
+If I accede to this demand for blackmail, I am afraid that I will be the victim of future demands.
+abortive
+unsuccessful; fruitless
+We had to abandon our abortive attempts.

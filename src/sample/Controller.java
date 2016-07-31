@@ -59,7 +59,7 @@ public class Controller {
             nam = name.getText();
             pas = pass.getText();
             if (nam.equals(Nam) && Pas.equals(pas)) {
-                Main.Uname=nam;
+                Main.Uname=new String(nam);
                 Parent homescene = FXMLLoader.load(getClass().getResource("startpage.fxml"));
                 Scene startpage = new Scene(homescene, 650, 600);
                 Stage homesateg = (Stage) ((Node) e.getSource()).getScene().getWindow();
